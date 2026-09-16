@@ -1,19 +1,19 @@
 import java.util.Scanner;
 public class ModifikasiKasus2 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         System.out.print("Masukkan lebar tanah      : ");
-        double lebar = input.nextDouble();
+        double lebar = sc.nextDouble();
 
         System.out.print("Masukkan panjang tanah    : ");
-        double panjang = input.nextDouble();
+        double panjang = sc.nextDouble();
 
         System.out.print("Masukkan diameter kolam   : ");
-        double diameter = input.nextDouble();
+        double diameter = sc.nextDouble();
 
         System.out.print("Masukkan sisi taman       : ");
-        double sisi = input.nextDouble();
+        double sisi = sc.nextDouble();
 
         double luasTanah = lebar * panjang;
 
@@ -30,6 +30,6 @@ public class ModifikasiKasus2 {
         System.out.println("Luas Taman           : " + luasTaman + " m2");
         System.out.println("Luas Tidak Digunakan : " + luasTidakDigunakan + " m2");
 
-        input.close();
+        sc.close();
     }
 }
