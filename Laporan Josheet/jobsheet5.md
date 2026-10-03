@@ -62,7 +62,7 @@ public class nestedUjianSkripsi27 {
 
 #### 2.1.2 Hasil Running / Screenshot Output
 
-![Output (ya, 6, 5)](Screenshot 2026-10-03 174756.png)
+![Output (ya, 6, 5)](https://github.com/subhanakbarmashuri23-glitch/Praktek-Dasar-Pemograman/blob/8ad05c3285e4d894964fb3eaf15e09944f066608/Screenshot%202026-10-03%20174756.png)
 
 ![Output (Tidak)](img/p1-output-tidak.png)
 
