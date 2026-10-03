@@ -1,0 +1,338 @@
+# JOBSHEET 5 - PEMILIHAN 2
+
+**Identitas Mahasiswa:**
+* **Nama:** [Subhan Akbar Mashuri]
+* **NIM:** [264107020214]
+* **Kelas / No. Presensi:** [TI-1D / 27]
+
+---
+
+## 1: TUJUAN PRAKTIKUM
+
+Berikut adalah tujuan pelaksanaan praktikum pada bab ini:
+
+1. Mahasiswa mampu menyelesaikan permasalahan/studi kasus menggunakan sintaks
+pemilihan bersarang
+2. Mahasiswa mampu menerapkan sintaks pemilihan bersarang ke dalam program Jawa
+3. Mahasiswa mampu menerapkan operator logika &&, ||, dan ! pada struktur pemilihan
+
+
+---
+
+## 2: HASIL PERCOBAAN & ANALISIS
+
+### 2.1 Percobaan 1: Nested IF untuk Mengecek Syarat Ujian Skripsi
+
+
+#### 2.1.1 Kode Program Java
+```java
+import java.util.Scanner;
+
+public class nestedUjianSkripsi27 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String pesan;
+
+        System.out.print("Apakah mahasiswa sudah bebas kompen? (Ya/Tidak): ");
+        String bebasKompen = sc.nextLine().trim();
+
+        System.out.print("Masukkan jumlah log bimbingan Pembimbing 1: ");
+        int bimbinganP1 = sc.nextInt();
+        System.out.print("Masukkan jumlah log bimbingan Pembimbing 2: ");
+        int bimbinganP2 = sc.nextInt();
+
+        if (bebasKompen.equalsIgnoreCase("Ya")) {
+            if (bimbinganP1 >= 8 && bimbinganP2 >= 4) {
+                pesan = "Semua syarat terpenuhi. Mahasiswa boleh mendaftar ujian skripsi";
+            } else if (bimbinganP1 < 8 && bimbinganP2 < 4) {
+                pesan = "Gagal! Log bimbingan P1 kurang dari 8 kali dan P2 kurang dari 4 kali";
+            } else if (bimbinganP1 < 8) {
+                pesan = "Gagal! Log bimbingan P1 belum mencapai 8 kali";
+            } else {
+                pesan = "Gagal! Log bimbingan P2 belum mencapai 4 kali";
+            }
+        } else {
+            pesan = "Gagal! Mahasiswa masih memiliki tanggungan kompen";
+        }
+        System.out.println(pesan);
+        sc.close();
+    }
+}
+```
+
+#### 2.1.2 Hasil Running / Screenshot Output
+
+![Output (ya, 6, 5)](file:///C:/screenshotuntukupkegithub/jobsheet5/Screenshot2026-10-03174756.png)
+
+![Output (Tidak)](img/p1-output-tidak.png)
+
+
+#### 2.1.3 Jawaban Pertanyaan / Pertanyaan Refleksi
+* **Pertanyaan 1:** Apa yang terjadi jika mahasiswa menjawab "No" pada pertanyaan bebas kompen?
+Mengapa demikian?
+  * **Jawab:** Program menampilkan `Gagal! Mahasiswa masih memiliki tanggungan kompen`. Kondisi `bebasKompen.equalsIgnoreCase("Ya")` bernilai `false` karena "No" tidak sama dengan "Ya" (huruf besar/kecil diabaikan, tetapi hurufnya tetap harus sama). Program masuk ke `else` luar, sehingga IF bersarang yang mengecek log bimbingan tidak dijalankan. Jawaban apa pun selain "Ya" dianggap belum bebas kompen.
+
+* **Pertanyaan 2:** Jelaskan maksud dari potongan kode berikut!
+   if (bimbimganP1 >= 8 && bimbinganP2 >=4 ) {
+  * **Jawab:** Kondisi bernilai `true` hanya jika kedua syarat terpenuhi: bimbingan dengan pembimbing 1 minimal 8 kali **dan** bimbingan dengan pembimbing 2 minimal 4 kali. Jika salah satunya tidak terpenuhi, hasilnya `false`.
+
+* **Pertanyaan 3:** Bagaimana alur pemeriksaan syarat mahasiswa dari awal sampai akhir? Jelaskan secara
+runtut untuk semua kondisi!
+  * **Jawab:**
+        1. Cek kompen. Jika bukan "Ya": gagal karena masih ada tanggungan kompen.
+        2. Jika "Ya", cek log bimbingan:
+            - P1 >= 8 dan P2 >= 4: semua syarat terpenuhi.
+            - P1 < 8 dan P2 < 4: kedua log kurang.
+            - P1 < 8: hanya P1 kurang.
+            - Selain itu: hanya P2 kurang.
+        3. Tampilkan pesan hasil.
+
+---
+
+### 2.2 Percobaan 2: Operator Logika untuk Menentukan Akses WiFi Kampus
+
+
+#### 2.2.1 Kode Progam Java
+```java
+import java.util.Scanner;
+
+public class operatorLogikaWifi27 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        boolean mahasiswa;
+        boolean dosen;
+        boolean akunDiblokir;
+
+        System.out.print("Apakah pengguna mahasiswa? (true/false): ");
+        mahasiswa = sc.nextBoolean();
+
+        System.out.print("Apakah pengguna dosen? (true/false): ");
+        dosen = sc.nextBoolean();
+
+        System.out.print("Apakah akun sedang diblokir? (true/false): ");
+        akunDiblokir = sc.nextBoolean();
+
+        if ((mahasiswa || dosen) && !akunDiblokir) {
+            System.out.println("Akses WiFi diberikan");
+        } else {
+            System.out.println("Akses WiFi ditolak");
+        }
+        sc.close();
+    }
+}
+```
+
+#### 2.2.2 Hasil Running / Screenshot Output
+
+| Uji | mahasiswa | dosen | akunDiblokir | Hasil |
+|---|---|---|---|---|
+| 1 | true | false | false | Akses WiFi diberikan |
+| 2 | false | true | false | Akses WiFi diberikan |
+| 3 | true | false | true | Akses WiFi ditolak |
+| 4 | false | false | false | Akses WiFi ditolak |
+
+![Uji 1](img/p2-uji1.png)
+
+![Uji 2](img/p2-uji2.png)
+
+![Uji 3](img/p2-uji3.png)
+
+![Uji 4](img/p2-uji4.png)
+
+#### 2.2.3 Jawaban Pertanyaan / Pertanyaan Refleksi
+
+* **Pertanyaan 1:** Jelaskan fungsi operator ||, &&, dan ! pada kondisi program tersebut.
+  * **Jawab:** 
+            - `||` (OR): `true` jika minimal salah satu benar. Pengguna cukup berstatus mahasiswa **atau** dosen.
+            - `&&` (AND): `true` jika semua benar. Syarat "mahasiswa atau dosen" **dan** "tidak diblokir" harus sama-sama terpenuhi.
+            - `!` (NOT): membalik nilai boolean. `!akunDiblokir` bernilai `true` ketika akun **tidak** diblokir.
+
+* **Pertanyaan 2:** Mengapa pengguna dosen tetap dapat memperoleh akses ketika nilai mahasiswa = false?
+  * **Jawab:** Karena `(mahasiswa || dosen)` dengan `false || true` menghasilkan `true`. Operator `||` hanya butuh salah satu operand bernilai `true`. Selama akun tidak diblokir (`!false` = `true`), kondisi akhir `true && true` = `true`, sehingga akses diberikan.
+
+* **Pertanyaan 3:** Ubah operator || menjadi &&. Jalankan kembali program menggunakan data uji 1 dan 2. Apa yang terjadi dan mengapa?
+  * **Jawab:** Keduanya **ditolak**. Dengan `&&`, pengguna harus menjadi mahasiswa **dan** dosen sekaligus, yang tidak terpenuhi pada uji 1 maupun uji 2.
+
+* **Pertanyaan 4:** Pada ekspresi mahasiswa || dosen, kapan kondisi dosen tidak perlu dievaluasi? Jelaskan berdasarkan short-circuit evaluation.
+  *  **Jawab:** Saat `mahasiswa = true`. Pada OR, jika operand kiri sudah `true`, hasil keseluruhan pasti `true` apa pun nilai `dosen`, sehingga Java melewati evaluasi operand kanan (short-circuit evaluation).
+  
+* **Pertanyaan 5:** Pada ekspresi (mahasiswa || dosen) && !akunDiblokir, kapan kondisi !akunDiblokir tidak perlu dievaluasi? Jelaskan.
+  * **Jawab:** Saat `(mahasiswa || dosen)` bernilai `false`, yaitu `mahasiswa = false` dan `dosen = false` (uji 4). Operator `&&` juga menerapkan short-circuit: jika operand kiri `false`, hasil pasti `false`, sehingga `!akunDiblokir` dilewati. Jika operand kiri `true`, barulah `!akunDiblokir` dievaluasi.
+
+---
+
+### 2.3 Percobaan 3: Nested IF dan Operator Logika untuk Menentukan Akses Laboratoriuim
+
+#### 2.3.1 Kode Progam Java
+```java
+import java.util.Scanner;
+
+public class nestedAksesLab27 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        boolean mahasiswaAktif;
+        boolean sedangDisanksi;
+        boolean punyaIzinDosen;
+        boolean asistenLab;
+
+        System.out.print("Apakah mahasiswa aktif? (true/false): ");
+        mahasiswaAktif = sc.nextBoolean();
+        System.out.print("Apakah sedang disanksi? (true/false): ");
+        sedangDisanksi = sc.nextBoolean();
+        System.out.print("Apakah punya izin dosen? (true/false): ");
+        punyaIzinDosen = sc.nextBoolean();
+        System.out.print("Apakah asisten lab? (true/false): ");
+        asistenLab = sc.nextBoolean();
+
+        if (mahasiswaAktif && !sedangDisanksi) {
+            if (punyaIzinDosen || asistenLab) {
+                System.out.println("Akses laboratorium diberikan ");
+            } else {
+                System.out.println("Akses ditolak: membutuhkan izin dosen atau status asisten lab");
+            }
+        } else {
+            System.out.println("Akses ditolak: status mahasiswa tidak memenuhi syarat");
+        }
+        sc.close(); 
+    }
+}
+```    
+
+
+#### 2.3.2 Hasil Running / Screenshot Output
+Berikut adalah contoh tampilan *output* setelah program dijalankan:
+
+![Contoh Gambar Output Percobaan 1](/contoh-gambar.png)
+
+#### 2.3.3 Jawaban Pertanyaan / Pertanyaan Refleksi
+* **Pertanyaan 1:** Mengapa pemeriksaan punyaIzinDosen || asistenLab ditempatkan di dalam IF pertama?
+  * **Jawab:** Karena itu adalah pemeriksaan tahap kedua yang bergantung pada tahap pertama. Izin dosen atau status asisten hanya perlu dicek jika mahasiswa sudah aktif dan tidak disanksi. Di dalam IF pertama, pemeriksaan ini hanya dijalankan bila kondisi pertama `true`; bila `false`, program langsung menolak tanpa memeriksanya.
+* **Pertanyaan 2:** Jelaskan fungsi operator &&, ||, dan ! pada program tersebut.
+  * **Jawab:** 
+          - `&&` pada `mahasiswaAktif && !sedangDisanksi`: kedua syarat dasar wajib terpenuhi.
+          - `!` pada `!sedangDisanksi`: membalik nilai sehingga `true` bila mahasiswa **tidak** sedang disanksi.
+          - `||` pada `punyaIzinDosen || asistenLab`: cukup salah satu terpenuhi agar akses diberikan.
+* **Pertanyaan 3:** Apakah syarat akses dapat ditulis menjadi satu kondisi: mahasiswaAktif && !sedangDisanksi && (punyaIzinDosen || asistenLab)? Jelaskan apakah keputusan akses akhirnya sama.
+  * **Jawab:** Bisa, dan keputusan akhir akses **sama**: akses diberikan hanya jika mahasiswa aktif, tidak disanksi, dan punya izin dosen atau berstatus asisten. Bedanya, dengan satu kondisi program hanya memiliki satu `else`, sehingga tidak dapat membedakan alasan penolakan.
+* **Pertanyaan 4:** Apa keuntungan menggunakan Nested IF pada kasus ini dibandingkan hanya satu IF jika sistem perlu menampilkan alasan penolakan yang berbeda?
+  * **Jawab:** 
+          - Dapat menampilkan alasan penolakan yang spesifik di tiap tahap.
+          - Alur mengikuti urutan logika sehingga lebih mudah dibaca dan dilacak.
+          - Pemeriksaan tahap berikutnya dilewati jika tahap awal gagal.
+          - Lebih mudah dikembangkan, misalnya menambah syarat atau pesan baru.
+* **Pertanyaan 5:** Buat satu kombinasi masukan yang menyebabkan akses ditolak pada level pertama dan satu kombinasi yang menyebabkan akses ditolak pada level kedua.
+  * **Jawab:** - **Level 1:** 
+- aktif = `false`, disanksi = `false`, izin = `true`, asisten = `true`.
+- **Level 2:** aktif = `true`, disanksi = `false`, izin = `false`, asisten = `false`.
+
+![Penolakan level 1](img/p3-level1.png)
+
+![Penolakan level 2](img/p3-level2.png)
+
+
+---
+
+## 3: TUGAS MANDIRI
+
+Berikut adalah daftar tugas yang dikerjakan pada Jobsheet ini:
+
+- [x] **Tugas 1:** Implementasikan flowchart yang telah Anda buat pada Latihan 2 Pertemuan 6 terkait sistem diskon toko buku ke dalam program Java. Program wajib menerapkan struktur pemilihan bersarang (Nested IF). Gunakan operator logika apabila diperlukan.
+- [x] **Tugas 2:** Buatlah program Java untuk sistem seleksi calon asisten praktikum berdasarkan
+ketentuan berikut:
+• Mahasiswa dapat mengikuti seleksi apabila berstatus aktif dan tidak sedang mendapatkan sanksi akademik.
+• Jika syarat tersebut terpenuhi, mahasiswa harus memenuhi syarat berikutnya yaitu nilai Dasar Pemrograman minimal 80 atau memiliki sertifikat kompetensi
+pemrograman.
+• Jika lolos 2 syarat tersebut, mahasiswa akan dipanggil untuk mengikuti wawancara. Mahasiswa diterima sebagai asisten apabila nilai wawancara minimal 75.
+• Program harus menampilkan alasan apabila mahasiswa gagal pada setiap tahap seleksi.
+• Gunakan pemilihan bersarang dan operator logika. Simpan file dengan nama tugas2SeleksiAsistenNoPresensi.java
+
+
+### 3.1 Implementasi Kode Tugas
+
+```java
+//Tugas 1
+import java.util.Scanner;
+
+public class Tugas1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double diskon=0;
+
+        System.out.print("Membeli buku (kamus/novel/lainnya): ");
+        String buku = sc.nextLine().trim();
+        System.out.print("Jumlah buku yang dibeli: ");
+        int jumlahBuku = sc.nextInt();
+
+        if (buku.equalsIgnoreCase("kamus")) {
+            diskon += 0.1;
+            if (jumlahBuku > 2) {
+                diskon += 0.02;
+            }
+        } else if (buku.equalsIgnoreCase("novel")) {
+            diskon += 0.07;
+            if (jumlahBuku > 3) {
+                diskon += 0.02;
+            } else {
+                diskon += 0.01;
+            }
+        } else {
+            if (buku.equalsIgnoreCase("lainnya")) {
+                diskon += 0.05;
+            }
+        }
+
+        System.out.print("jumlah diskon: " + Math.round(diskon * 100) + "%");
+
+        sc.close();
+        }
+    }
+```
+
+
+```java
+//Tugas 2
+import java.util.Scanner;
+
+public class Tugas2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        boolean mahasiswaAktif;
+        boolean sedangDisanksi;
+        double nilaiDaspro;
+        double nilaiWawancara;
+
+        System.out.print("Apakah mahasiswa aktif? (true/false): ");
+        mahasiswaAktif = sc.nextBoolean();
+        System.out.print("Apakah sedang disanksi? (true/false): ");
+        sedangDisanksi = sc.nextBoolean();
+        System.out.print("Masukan nilai daspro: ");
+        nilaiDaspro = sc.nextDouble();
+        System.out.print("Masukan nilai wawancara: ");
+        nilaiWawancara = sc.nextDouble();
+
+        if (mahasiswaAktif && !sedangDisanksi) {
+            if (nilaiDaspro >= 80) {
+                if (nilaiWawancara >= 75) {
+                    System.out.println("Selamat anda diterima");
+                } else {
+                    System.out.println("Gagal: nilai wawancara kurang dari 75");
+                }
+            } else {
+                System.out.println("Gagal: Nilai daspro kurang daari 80!!");
+            }
+        } else {
+            System.out.println("Gagal: Mahasiswa tidak aktif atau sedang disanksi!!");
+        }
+        sc.close();
+    }
+}
+```
+---
+
+## 4: KESIMPULAN
+
+Nested IF dipakai untuk syarat bertingkat, di mana syarat berikutnya hanya diperiksa jika syarat sebelumnya terpenuhi, sehingga program bisa menampilkan alasan kegagalan yang spesifik di tiap tahap. Operator logika &&, ||, dan ! menggabungkan beberapa kondisi menjadi satu keputusan, dan pemilihan operator yang salah mengubah hasil program secara total. Short-circuit evaluation membuat Java melewati pengecekan kondisi yang tidak lagi memengaruhi hasil, sehingga program lebih efisien. Dengan demikian, mahasiswa mampu menyelesaikan studi kasus dengan pemilihan bersarang dan operator logika dalam program Java.

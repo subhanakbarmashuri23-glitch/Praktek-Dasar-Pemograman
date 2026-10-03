@@ -1,10 +1,11 @@
 import java.util.Scanner;
+
 public class PemilihanSwitch27 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("--- Cetak KRS SIAKAD ---");
-        System.out.println("Masukan semester saat ini:");
+        System.out.print("Masukan semester saat ini:");
         int semester = sc.nextInt();
 
        switch (semester) {
@@ -22,7 +23,7 @@ public class PemilihanSwitch27 {
                 break;
             case 5:
                 System.out.println("KRS Semester 5 ditampilkan");
-                break;
+                
             case 6:
                 System.out.println("KRS Semester 6 ditampilkan");
                 break;
