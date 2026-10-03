@@ -132,13 +132,13 @@ public class operatorLogikaWifi27 {
 | 3 | true | false | true | Akses WiFi ditolak |
 | 4 | false | false | false | Akses WiFi ditolak |
 
-![Uji 1](img/p2-uji1.png)
+![Uji 1](https://github.com/subhanakbarmashuri23-glitch/Praktek-Dasar-Pemograman/blob/aa07f3fe46cc870886c5fae63a211530803f96d4/screenshot/Jobsheet%205/Screenshot%202026-10-03%20205020.png)
 
-![Uji 2](img/p2-uji2.png)
+![Uji 2](https://github.com/subhanakbarmashuri23-glitch/Praktek-Dasar-Pemograman/blob/3224e78e95b275885ea4cd7694faf83d6e03a0a5/screenshot/Jobsheet%205/Screenshot%202026-10-03%20205117.png)
 
-![Uji 3](img/p2-uji3.png)
+![Uji 3](https://github.com/subhanakbarmashuri23-glitch/Praktek-Dasar-Pemograman/blob/d10e28b3264a73386911373210d128d9b4d3d648/screenshot/Jobsheet%205/Screenshot%202026-10-03%20205150.png)
 
-![Uji 4](img/p2-uji4.png)
+![Uji 4](https://github.com/subhanakbarmashuri23-glitch/Praktek-Dasar-Pemograman/blob/5a30ff6d7248e51dc5ca02e7d409fc940d0f1be9/screenshot/Jobsheet%205/Screenshot%202026-10-03%20205224.png)
 
 #### 2.2.3 Jawaban Pertanyaan / Pertanyaan Refleksi
 
