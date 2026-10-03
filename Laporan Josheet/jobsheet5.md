@@ -62,7 +62,7 @@ public class nestedUjianSkripsi27 {
 
 #### 2.1.2 Hasil Running / Screenshot Output
 
-![Output (ya, 6, 5)](file:///C:/screenshotuntukupkegithub/jobsheet5/Screenshot2026-10-03174756.png)
+![Output (ya, 6, 5)](Screenshot 2026-10-03 174756.png)
 
 ![Output (Tidak)](img/p1-output-tidak.png)
 
