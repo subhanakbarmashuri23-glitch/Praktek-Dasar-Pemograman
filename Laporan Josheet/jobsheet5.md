@@ -64,7 +64,6 @@ public class nestedUjianSkripsi27 {
 
 ![Output (ya, 6, 5)](https://github.com/subhanakbarmashuri23-glitch/Praktek-Dasar-Pemograman/blob/444c3595833c602259e3ae24fdc2c9cc13b7f458/screenshot/Jobsheet%205/Screenshot%202026-10-03%20174756.png)
 
-![Output (Tidak)](img/p1-output-tidak.png)
 
 
 #### 2.1.3 Jawaban Pertanyaan / Pertanyaan Refleksi
@@ -204,7 +203,7 @@ public class nestedAksesLab27 {
 #### 2.3.2 Hasil Running / Screenshot Output
 Berikut adalah contoh tampilan *output* setelah program dijalankan:
 
-![Contoh Gambar Output Percobaan 1](/contoh-gambar.png)
+![Contoh Gambar Output Percobaan 1](https://github.com/subhanakbarmashuri23-glitch/Praktek-Dasar-Pemograman/blob/9ae056cfafecd8df38a1802f50c04bd59b92c2d0/screenshot/Jobsheet%205/Screenshot%202026-10-04%20122510.png)
 
 #### 2.3.3 Jawaban Pertanyaan / Pertanyaan Refleksi
 * **Pertanyaan 1:** Mengapa pemeriksaan punyaIzinDosen || asistenLab ditempatkan di dalam IF pertama?
@@ -227,9 +226,9 @@ Berikut adalah contoh tampilan *output* setelah program dijalankan:
 - aktif = `false`, disanksi = `false`, izin = `true`, asisten = `true`.
 - **Level 2:** aktif = `true`, disanksi = `false`, izin = `false`, asisten = `false`.
 
-![Penolakan level 1](img/p3-level1.png)
+![Penolakan level 1](https://github.com/subhanakbarmashuri23-glitch/Praktek-Dasar-Pemograman/blob/e39e808e9aa44508fb4be1965dc2a5055abab428/screenshot/Jobsheet%205/Screenshot%202026-10-04%20122831.png)
 
-![Penolakan level 2](img/p3-level2.png)
+![Penolakan level 2](https://github.com/subhanakbarmashuri23-glitch/Praktek-Dasar-Pemograman/blob/e0d9f6304d0a46be1e13538c654059149dc814a0/screenshot/Jobsheet%205/Screenshot%202026-10-04%20123049.png)
 
 
 ---
