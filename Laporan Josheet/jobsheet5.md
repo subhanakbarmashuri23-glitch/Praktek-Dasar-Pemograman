@@ -247,12 +247,12 @@ Berikut adalah daftar tugas yang dikerjakan pada Jobsheet ini:
 - [x] **Tugas 1:** Implementasikan flowchart yang telah Anda buat pada Latihan 2 Pertemuan 6 terkait sistem diskon toko buku ke dalam program Java. Program wajib menerapkan struktur pemilihan bersarang (Nested IF). Gunakan operator logika apabila diperlukan.
 - [x] **Tugas 2:** Buatlah program Java untuk sistem seleksi calon asisten praktikum berdasarkan
 ketentuan berikut:
-• Mahasiswa dapat mengikuti seleksi apabila berstatus aktif dan tidak sedang mendapatkan sanksi akademik.
-• Jika syarat tersebut terpenuhi, mahasiswa harus memenuhi syarat berikutnya yaitu nilai Dasar Pemrograman minimal 80 atau memiliki sertifikat kompetensi
+* Mahasiswa dapat mengikuti seleksi apabila berstatus aktif dan tidak sedang mendapatkan sanksi akademik.
+* Jika syarat tersebut terpenuhi, mahasiswa harus memenuhi syarat berikutnya yaitu nilai Dasar Pemrograman minimal 80 atau memiliki sertifikat kompetensi
 pemrograman.
-• Jika lolos 2 syarat tersebut, mahasiswa akan dipanggil untuk mengikuti wawancara. Mahasiswa diterima sebagai asisten apabila nilai wawancara minimal 75.
-• Program harus menampilkan alasan apabila mahasiswa gagal pada setiap tahap seleksi.
-• Gunakan pemilihan bersarang dan operator logika. Simpan file dengan nama tugas2SeleksiAsistenNoPresensi.java
+* Jika lolos 2 syarat tersebut, mahasiswa akan dipanggil untuk mengikuti wawancara. Mahasiswa diterima sebagai asisten apabila nilai wawancara minimal 75.
+* Program harus menampilkan alasan apabila mahasiswa gagal pada setiap tahap seleksi.
+* Gunakan pemilihan bersarang dan operator logika. Simpan file dengan nama tugas2SeleksiAsistenNoPresensi.java
 
 
 ### 3.1 Implementasi Kode Tugas
