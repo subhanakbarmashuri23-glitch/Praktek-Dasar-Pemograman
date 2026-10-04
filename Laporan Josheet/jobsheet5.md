@@ -16,7 +16,6 @@ pemilihan bersarang
 2. Mahasiswa mampu menerapkan sintaks pemilihan bersarang ke dalam program Jawa
 3. Mahasiswa mampu menerapkan operator logika &&, ||, dan ! pada struktur pemilihan
 
-
 ---
 
 ## 2: HASIL PERCOBAAN & ANALISIS
