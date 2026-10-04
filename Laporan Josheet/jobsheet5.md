@@ -222,8 +222,8 @@ Berikut adalah contoh tampilan *output* setelah program dijalankan:
           - Pemeriksaan tahap berikutnya dilewati jika tahap awal gagal.
           - Lebih mudah dikembangkan, misalnya menambah syarat atau pesan baru.
 * **Pertanyaan 5:** Buat satu kombinasi masukan yang menyebabkan akses ditolak pada level pertama dan satu kombinasi yang menyebabkan akses ditolak pada level kedua.
-  * **Jawab:** - **Level 1:** 
-- aktif = `false`, disanksi = `false`, izin = `true`, asisten = `true`.
+  * **Jawab:** -
+- **Level 1:** aktif = `false`, disanksi = `false`, izin = `true`, asisten = `true`.
 - **Level 2:** aktif = `true`, disanksi = `false`, izin = `false`, asisten = `false`.
 
 ![Penolakan level 1](https://github.com/subhanakbarmashuri23-glitch/Praktek-Dasar-Pemograman/blob/e39e808e9aa44508fb4be1965dc2a5055abab428/screenshot/Jobsheet%205/Screenshot%202026-10-04%20122831.png)
