@@ -200,7 +200,6 @@ public class nestedAksesLab27 {
 
 
 #### 2.3.2 Hasil Running / Screenshot Output
-Berikut adalah contoh tampilan *output* setelah program dijalankan:
 
 ![Contoh Gambar Output Percobaan 1](https://github.com/subhanakbarmashuri23-glitch/Praktek-Dasar-Pemograman/blob/9ae056cfafecd8df38a1802f50c04bd59b92c2d0/screenshot/Jobsheet%205/Screenshot%202026-10-04%20122510.png)
 
