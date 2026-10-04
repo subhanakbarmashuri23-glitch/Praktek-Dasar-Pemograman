@@ -24,6 +24,9 @@ pemilihan bersarang
 
 
 #### 2.1.1 Kode Program Java
+
+Percobaan ini membuat program yang memeriksa syarat mendaftar ujian skripsi secara bertahap. Syarat pertama adalah bebas kompen. Jika terpenuhi, program memeriksa syarat kedua, yaitu log bimbingan minimal 8 kali dengan pembimbing 1 dan 4 kali dengan pembimbing 2. Jika gagal, program menampilkan alasan kegagalannya. Konsep yang dipelajari adalah Nested IF.
+
 ```java
 import java.util.Scanner;
 
@@ -91,6 +94,9 @@ runtut untuk semua kondisi!
 
 
 #### 2.2.1 Kode Progam Java
+
+Percobaan ini membuat program yang menentukan akses WiFi kampus. Akses diberikan jika pengguna adalah mahasiswa atau dosen, dan akunnya tidak diblokir. Konsep yang dipelajari adalah operator logika `||` (OR), `&&` (AND), dan `!` (NOT), termasuk short-circuit evaluation.
+
 ```java
 import java.util.Scanner;
 
@@ -163,6 +169,9 @@ public class operatorLogikaWifi27 {
 ### 2.3 Percobaan 3: Nested IF dan Operator Logika untuk Menentukan Akses Laboratoriuim
 
 #### 2.3.1 Kode Progam Java
+
+Percobaan ini menggabungkan Nested IF dengan operator logika untuk menentukan akses laboratorium di luar jadwal kuliah. Tahap pertama memeriksa mahasiswa aktif dan tidak sedang disanksi. Tahap kedua memeriksa apakah mahasiswa punya izin dosen atau merupakan asisten lab. Tiap tahap punya pesan penolakan sendiri.
+
 ```java
 import java.util.Scanner;
 
