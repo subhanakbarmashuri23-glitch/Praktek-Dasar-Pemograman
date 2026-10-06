@@ -16,7 +16,6 @@ pemilihan bersarang
 2. Mahasiswa mampu menerapkan sintaks pemilihan bersarang ke dalam program Jawa
 3. Mahasiswa mampu menerapkan operator logika &&, ||, dan ! pada struktur pemilihan
 
-
 ---
 
 ## 2: HASIL PERCOBAAN & ANALISIS
@@ -25,6 +24,9 @@ pemilihan bersarang
 
 
 #### 2.1.1 Kode Program Java
+
+Percobaan ini membuat program yang memeriksa syarat mendaftar ujian skripsi secara bertahap. Syarat pertama adalah bebas kompen. Jika terpenuhi, program memeriksa syarat kedua, yaitu log bimbingan minimal 8 kali dengan pembimbing 1 dan 4 kali dengan pembimbing 2. Jika gagal, program menampilkan alasan kegagalannya. Konsep yang dipelajari adalah Nested IF.
+
 ```java
 import java.util.Scanner;
 
@@ -62,9 +64,8 @@ public class nestedUjianSkripsi27 {
 
 #### 2.1.2 Hasil Running / Screenshot Output
 
-![Output (ya, 6, 5)](https://github.com/subhanakbarmashuri23-glitch/Praktek-Dasar-Pemograman/blob/8ad05c3285e4d894964fb3eaf15e09944f066608/Screenshot%202026-10-03%20174756.png)
+![Output (ya, 6, 5)](https://github.com/subhanakbarmashuri23-glitch/Praktek-Dasar-Pemograman/blob/444c3595833c602259e3ae24fdc2c9cc13b7f458/screenshot/Jobsheet%205/Screenshot%202026-10-03%20174756.png)
 
-![Output (Tidak)](img/p1-output-tidak.png)
 
 
 #### 2.1.3 Jawaban Pertanyaan / Pertanyaan Refleksi
@@ -93,6 +94,9 @@ runtut untuk semua kondisi!
 
 
 #### 2.2.1 Kode Progam Java
+
+Percobaan ini membuat program yang menentukan akses WiFi kampus. Akses diberikan jika pengguna adalah mahasiswa atau dosen, dan akunnya tidak diblokir. Konsep yang dipelajari adalah operator logika `||` (OR), `&&` (AND), dan `!` (NOT), termasuk short-circuit evaluation.
+
 ```java
 import java.util.Scanner;
 
@@ -132,13 +136,13 @@ public class operatorLogikaWifi27 {
 | 3 | true | false | true | Akses WiFi ditolak |
 | 4 | false | false | false | Akses WiFi ditolak |
 
-![Uji 1](img/p2-uji1.png)
+![Uji 1](https://github.com/subhanakbarmashuri23-glitch/Praktek-Dasar-Pemograman/blob/aa07f3fe46cc870886c5fae63a211530803f96d4/screenshot/Jobsheet%205/Screenshot%202026-10-03%20205020.png)
 
-![Uji 2](img/p2-uji2.png)
+![Uji 2](https://github.com/subhanakbarmashuri23-glitch/Praktek-Dasar-Pemograman/blob/3224e78e95b275885ea4cd7694faf83d6e03a0a5/screenshot/Jobsheet%205/Screenshot%202026-10-03%20205117.png)
 
-![Uji 3](img/p2-uji3.png)
+![Uji 3](https://github.com/subhanakbarmashuri23-glitch/Praktek-Dasar-Pemograman/blob/d10e28b3264a73386911373210d128d9b4d3d648/screenshot/Jobsheet%205/Screenshot%202026-10-03%20205150.png)
 
-![Uji 4](img/p2-uji4.png)
+![Uji 4](https://github.com/subhanakbarmashuri23-glitch/Praktek-Dasar-Pemograman/blob/5a30ff6d7248e51dc5ca02e7d409fc940d0f1be9/screenshot/Jobsheet%205/Screenshot%202026-10-03%20205224.png)
 
 #### 2.2.3 Jawaban Pertanyaan / Pertanyaan Refleksi
 
@@ -165,6 +169,9 @@ public class operatorLogikaWifi27 {
 ### 2.3 Percobaan 3: Nested IF dan Operator Logika untuk Menentukan Akses Laboratoriuim
 
 #### 2.3.1 Kode Progam Java
+
+Percobaan ini menggabungkan Nested IF dengan operator logika untuk menentukan akses laboratorium di luar jadwal kuliah. Tahap pertama memeriksa mahasiswa aktif dan tidak sedang disanksi. Tahap kedua memeriksa apakah mahasiswa punya izin dosen atau merupakan asisten lab. Tiap tahap punya pesan penolakan sendiri.
+
 ```java
 import java.util.Scanner;
 
@@ -202,9 +209,8 @@ public class nestedAksesLab27 {
 
 
 #### 2.3.2 Hasil Running / Screenshot Output
-Berikut adalah contoh tampilan *output* setelah program dijalankan:
 
-![Contoh Gambar Output Percobaan 1](/contoh-gambar.png)
+![Contoh Gambar Output Percobaan 1](https://github.com/subhanakbarmashuri23-glitch/Praktek-Dasar-Pemograman/blob/9ae056cfafecd8df38a1802f50c04bd59b92c2d0/screenshot/Jobsheet%205/Screenshot%202026-10-04%20122510.png)
 
 #### 2.3.3 Jawaban Pertanyaan / Pertanyaan Refleksi
 * **Pertanyaan 1:** Mengapa pemeriksaan punyaIzinDosen || asistenLab ditempatkan di dalam IF pertama?
@@ -223,13 +229,13 @@ Berikut adalah contoh tampilan *output* setelah program dijalankan:
           - Pemeriksaan tahap berikutnya dilewati jika tahap awal gagal.
           - Lebih mudah dikembangkan, misalnya menambah syarat atau pesan baru.
 * **Pertanyaan 5:** Buat satu kombinasi masukan yang menyebabkan akses ditolak pada level pertama dan satu kombinasi yang menyebabkan akses ditolak pada level kedua.
-  * **Jawab:** - **Level 1:** 
-- aktif = `false`, disanksi = `false`, izin = `true`, asisten = `true`.
+  * **Jawab:** -
+- **Level 1:** aktif = `false`, disanksi = `false`, izin = `true`, asisten = `true`.
 - **Level 2:** aktif = `true`, disanksi = `false`, izin = `false`, asisten = `false`.
 
-![Penolakan level 1](img/p3-level1.png)
+![Penolakan level 1](https://github.com/subhanakbarmashuri23-glitch/Praktek-Dasar-Pemograman/blob/e39e808e9aa44508fb4be1965dc2a5055abab428/screenshot/Jobsheet%205/Screenshot%202026-10-04%20122831.png)
 
-![Penolakan level 2](img/p3-level2.png)
+![Penolakan level 2](https://github.com/subhanakbarmashuri23-glitch/Praktek-Dasar-Pemograman/blob/e0d9f6304d0a46be1e13538c654059149dc814a0/screenshot/Jobsheet%205/Screenshot%202026-10-04%20123049.png)
 
 
 ---
@@ -241,12 +247,12 @@ Berikut adalah daftar tugas yang dikerjakan pada Jobsheet ini:
 - [x] **Tugas 1:** Implementasikan flowchart yang telah Anda buat pada Latihan 2 Pertemuan 6 terkait sistem diskon toko buku ke dalam program Java. Program wajib menerapkan struktur pemilihan bersarang (Nested IF). Gunakan operator logika apabila diperlukan.
 - [x] **Tugas 2:** Buatlah program Java untuk sistem seleksi calon asisten praktikum berdasarkan
 ketentuan berikut:
-• Mahasiswa dapat mengikuti seleksi apabila berstatus aktif dan tidak sedang mendapatkan sanksi akademik.
-• Jika syarat tersebut terpenuhi, mahasiswa harus memenuhi syarat berikutnya yaitu nilai Dasar Pemrograman minimal 80 atau memiliki sertifikat kompetensi
+* Mahasiswa dapat mengikuti seleksi apabila berstatus aktif dan tidak sedang mendapatkan sanksi akademik.
+* Jika syarat tersebut terpenuhi, mahasiswa harus memenuhi syarat berikutnya yaitu nilai Dasar Pemrograman minimal 80 atau memiliki sertifikat kompetensi
 pemrograman.
-• Jika lolos 2 syarat tersebut, mahasiswa akan dipanggil untuk mengikuti wawancara. Mahasiswa diterima sebagai asisten apabila nilai wawancara minimal 75.
-• Program harus menampilkan alasan apabila mahasiswa gagal pada setiap tahap seleksi.
-• Gunakan pemilihan bersarang dan operator logika. Simpan file dengan nama tugas2SeleksiAsistenNoPresensi.java
+* Jika lolos 2 syarat tersebut, mahasiswa akan dipanggil untuk mengikuti wawancara. Mahasiswa diterima sebagai asisten apabila nilai wawancara minimal 75.
+* Program harus menampilkan alasan apabila mahasiswa gagal pada setiap tahap seleksi.
+* Gunakan pemilihan bersarang dan operator logika. Simpan file dengan nama tugas2SeleksiAsistenNoPresensi.java
 
 
 ### 3.1 Implementasi Kode Tugas
@@ -255,40 +261,40 @@ pemrograman.
 //Tugas 1
 import java.util.Scanner;
 
-public class Tugas1 {
+public class TokoBuku23 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        double diskon=0;
-
-        System.out.print("Membeli buku (kamus/novel/lainnya): ");
-        String buku = sc.nextLine().trim();
-        System.out.print("Jumlah buku yang dibeli: ");
-        int jumlahBuku = sc.nextInt();
-
-        if (buku.equalsIgnoreCase("kamus")) {
-            diskon += 0.1;
-            if (jumlahBuku > 2) {
-                diskon += 0.02;
-            }
-        } else if (buku.equalsIgnoreCase("novel")) {
-            diskon += 0.07;
-            if (jumlahBuku > 3) {
-                diskon += 0.02;
-            } else {
-                diskon += 0.01;
-            }
-        } else {
-            if (buku.equalsIgnoreCase("lainnya")) {
-                diskon += 0.05;
-            }
-        }
-
-        System.out.print("jumlah diskon: " + Math.round(diskon * 100) + "%");
-
-        sc.close();
-        }
-    }
+        Scanner sc =  new Scanner(System.in); 
+ 
+        double diskon = 0; 
+        System.out.print("Masukkan buku yang dibeli (kamus/novel):  ");    
+        String buku = sc.nextLine(); 
+        System.out.print("Masukkan jumlah buku: "); 
+        int jumlahBuku = sc.nextInt(); 
+ 
+        if (buku.equalsIgnoreCase("kamus") || buku.equalsIgnoreCase("novel")) { 
+            if (buku.equalsIgnoreCase("kamus")) { 
+                diskon = 0.1; 
+                if (jumlahBuku > 2) { 
+                    diskon += 0.02; 
+                } 
+            } else { 
+                diskon = 0.07; 
+                if (jumlahBuku > 3) { 
+                    diskon += 0.02; 
+                } else { 
+                    diskon += 0.01; 
+                } 
+            } 
+        } else { 
+            if (jumlahBuku > 3) { 
+                diskon = 0.05; 
+            } 
+        } 
+        diskon = 100 * diskon; 
+        System.out.println("Jumlah diskon yang diberikan adalah " + (int) diskon + "%"); 
+        sc.close(); 
+    } 
+} 
 ```
 
 
@@ -296,7 +302,7 @@ public class Tugas1 {
 //Tugas 2
 import java.util.Scanner;
 
-public class Tugas2 {
+public class AsistenPratikum23 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
