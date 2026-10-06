@@ -1,9 +1,9 @@
 # JOBSHEET 5 - PEMILIHAN 2
 
 **Identitas Mahasiswa:**
-* **Nama:** [Subhan Akbar Mashuri]
-* **NIM:** [264107020214]
-* **Kelas / No. Presensi:** [TI-1D / 27]
+* **Nama:** Subhan Akbar Mashuri
+* **NIM:** 264107020214
+* **Kelas / No. Presensi:** TI-1D / 27
 
 ---
 
