@@ -261,7 +261,7 @@ pemrograman.
 //Tugas 1
 import java.util.Scanner;
 
-public class Tugas1 {
+public class TokoBuku23 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -302,7 +302,7 @@ public class Tugas1 {
 //Tugas 2
 import java.util.Scanner;
 
-public class Tugas2 {
+public class AsistenPratikum23 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
